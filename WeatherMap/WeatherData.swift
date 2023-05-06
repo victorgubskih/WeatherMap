@@ -25,7 +25,6 @@ struct WeatherData: Codable {
         let time: String
     }
     
-        
     let hourly_units: HourlyUunits
     struct HourlyUunits: Codable {
         let time: String
@@ -44,6 +43,7 @@ struct WeatherData: Codable {
         let surface_pressure: [Double]
         
     }
+    
     let daily_units: DailyUnits
     struct DailyUnits: Codable {
         let time: String
@@ -53,17 +53,12 @@ struct WeatherData: Codable {
         let sunset: String
     }
         
-        
-        let daily: Deily
-   
-    struct Deily: Codable {
+    let daily: Deily
+   struct Deily: Codable {
         let time: [String]
         let temperature_2m_max: [Double]
-           
         let temperature_2m_min: [Double]
-            
         let sunrise: [String]
-           
         let sunset: [String]
     }
     

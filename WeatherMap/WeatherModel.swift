@@ -69,13 +69,13 @@ struct WeatherModel {
         var daily = [Daily]()
         for i in 0..<data.daily.time.count {
             if let time = dayDateFormater.date(from: data.daily.time[i]),
-                let sunrise = fullDateFormater.date(from: data.daily.sunrise[i]),
+               let sunrise = fullDateFormater.date(from: data.daily.sunrise[i]),
                let sunset = fullDateFormater.date(from: data.daily.sunset[i]) {
-                let hourly = hourlyModel(from: data, for: time)
-                if hourly.isEmpty {
+               let hourly = hourlyModel(from: data, for: time)
+               if hourly.isEmpty {
                     continue
-                }
-                let day = Daily(
+               }
+               let day = Daily(
                     time: time,
                     maxTemperature: "\(data.daily.temperature_2m_max[i]) " + dailyTemperatureUnitMax,
                     minTemperature: "\(data.daily.temperature_2m_min[i]) " + dailyTemperatureUnitMin,
