@@ -22,6 +22,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.register(DayHeaderView.nib, forHeaderFooterViewReuseIdentifier: "header")
+        
         hourlyFormatter.dateFormat = "HH:mm"
         hourlyFormatter.timeZone = TimeZone.current
         dailyFormatter.dateFormat = "YYYY MMM dd"
@@ -49,9 +51,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let day = dataSourse?.daily[section].time ?? Date()
-        return dailyFormatter.string(from: day)
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let dataSourse = dataSourse else { return nil }
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "header") as? DayHeaderView else { return nil }
+        
+        let day = dataSourse.daily[section].time
+        headerView.calendarLabel.text = dailyFormatter.string(from: day)
+       
+        let sunrise = dataSourse.daily[section].sunrise
+        headerView.sunriseLabel.text = hourlyFormatter.string(from: sunrise)
+        
+        let sunset = dataSourse.daily[section].sunset
+        headerView.sunsetLabel.text = hourlyFormatter.string(from: sunset)
+        
+        let maxTemperature = dataSourse.daily[section].maxTemperature
+        headerView.temperaturelabelMax.text = dailyFormatter.string(from: <#T##Date#>)
+        
+        let minTemperature = dataSourse.daily[section].minTemperature
+        headerView.temperaturelabelMin.text = dailyFormatter.string(from: <#T##Date#>)
+        
+        return headerView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
