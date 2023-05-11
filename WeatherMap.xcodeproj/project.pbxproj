@@ -18,6 +18,8 @@
 		775149352A02C84F00AB5AB7 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775149342A02C84E00AB5AB7 /* WeatherModel.swift */; };
 		7751493B2A0695E300AB5AB7 /* DayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751493A2A0695E300AB5AB7 /* DayHeaderView.swift */; };
 		7751493F2A097E2500AB5AB7 /* DayHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */; };
+		775149462A0C0FDC00AB5AB7 /* HourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */; };
+		775149472A0C0FDC00AB5AB7 /* HourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		775149342A02C84E00AB5AB7 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		7751493A2A0695E300AB5AB7 /* DayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHeaderView.swift; sourceTree = "<group>"; };
 		7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayHeaderView.xib; sourceTree = "<group>"; };
+		775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourTableViewCell.swift; sourceTree = "<group>"; };
+		775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */,
 				7751492E2A004BC200AB5AB7 /* NetworkManager.swift */,
 				775149322A012E7900AB5AB7 /* WeatherData.swift */,
+				775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */,
+				775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */,
 				775149342A02C84E00AB5AB7 /* WeatherModel.swift */,
 			);
 			path = WeatherMap;
@@ -140,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775149472A0C0FDC00AB5AB7 /* HourTableViewCell.xib in Resources */,
 				7751493F2A097E2500AB5AB7 /* DayHeaderView.xib in Resources */,
 				775149272A0045D900AB5AB7 /* LaunchScreen.storyboard in Resources */,
 				775149242A0045D900AB5AB7 /* Assets.xcassets in Resources */,
@@ -157,6 +164,7 @@
 				7751492F2A004BC200AB5AB7 /* NetworkManager.swift in Sources */,
 				7751493B2A0695E300AB5AB7 /* DayHeaderView.swift in Sources */,
 				775149332A012E7900AB5AB7 /* WeatherData.swift in Sources */,
+				775149462A0C0FDC00AB5AB7 /* HourTableViewCell.swift in Sources */,
 				7751491F2A0045D500AB5AB7 /* ViewController.swift in Sources */,
 				7751491B2A0045D500AB5AB7 /* AppDelegate.swift in Sources */,
 				775149352A02C84F00AB5AB7 /* WeatherModel.swift in Sources */,

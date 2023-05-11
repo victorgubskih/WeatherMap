@@ -54,9 +54,11 @@ struct WeatherModel {
         let dailyTemperatureUnitMax = data.daily_units.temperature_2m_max
         let dailyTemperatureUnitMin = data.daily_units.temperature_2m_min
         let hourlyTemperatureUnit = data.hourly_units.temperature_2m
+        
         let fullDateFormater = DateFormatter()
         fullDateFormater.dateFormat = "YYYY-MM-dd'T'HH:mm"
         fullDateFormater.timeZone = TimeZone(identifier: data.timezone)
+        
         let dayDateFormater = DateFormatter()
         dayDateFormater.dateFormat = "YYYY-MM-dd"
         dayDateFormater.timeZone = TimeZone(identifier: data.timezone)
@@ -97,9 +99,11 @@ private func hourlyModel(from data: WeatherData, for dayDate: Date) -> [WeatherM
     let hourlyTemperatureUnit = data.hourly_units.temperature_2m
     let hourlyRainUnit = data.hourly_units.rain
     let hourlyPresureUnit = data.hourly_units.surface_pressure
+    
     let fullDateFormater = DateFormatter()
     fullDateFormater.dateFormat = "YYYY-MM-dd'T'HH:mm"
     fullDateFormater.timeZone = TimeZone(identifier: data.timezone)
+    
     var hourly = [WeatherModel.Hourly]()
     for i in 0..<data.hourly.time.count {
         if let time = fullDateFormater.date(from: data.hourly.time[i]),

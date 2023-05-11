@@ -19,10 +19,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        tableView.delegate = self
-        tableView.dataSource = self
+       
         
         tableView.register(DayHeaderView.nib, forHeaderFooterViewReuseIdentifier: "header")
+        tableView.register(HourTableViewCell.nib, forCellReuseIdentifier: "identifier")
         
         hourlyFormatter.dateFormat = "HH:mm"
         hourlyFormatter.timeZone = TimeZone.current
@@ -37,17 +37,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.tableView.reloadData()
             }
         }
-        
+    
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "identifier", for: indexPath)
         
-        let time = dataSourse?.daily[indexPath.section].hourly[indexPath.row].time ?? Date()
+        if let hourCell = cell as? HourTableViewCell, let hourModel =  dataSourse?.daily[indexPath.section].hourly[indexPath.row] {
+            let time = hourModel.time
+            hourCell.timeLabel.text = hourlyFormatter.string(from: time)
+            let temperature = hourModel.temperature
+            hourCell.temperatureLabel.text = temperature
+            let rain = hourModel.rain
+            hourCell.rainLabel.text = rain
+            let surfacePressure = hourModel.surfacePressure
+            hourCell.surfacePressureLabel.text = surfacePressure
+            
+            
+        }
+        /*let time = dataSourse?.daily[indexPath.section].hourly[indexPath.row].time ?? Date()
        
         cell.textLabel?.text = hourlyFormatter.string(from: time)
         cell.detailTextLabel?.text = dataSourse?.daily[indexPath.section].hourly[indexPath.row].temperature
-       
+       */
         return cell
     }
     
@@ -65,15 +77,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         headerView.sunsetLabel.text = hourlyFormatter.string(from: sunset)
         
         let maxTemperature = dataSourse.daily[section].maxTemperature
-        headerView.temperaturelabelMax.text = dailyFormatter.string(from: <#T##Date#>)
+        headerView.temperaturelabelMax.text = "Max: " + maxTemperature
         
         let minTemperature = dataSourse.daily[section].minTemperature
-        headerView.temperaturelabelMin.text = dailyFormatter.string(from: <#T##Date#>)
+        headerView.temperaturelabelMin.text =  "Min: " + minTemperature
         
         return headerView
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+   func numberOfSections(in tableView: UITableView) -> Int {
         return dataSourse?.daily.count ?? 0
     }
     
