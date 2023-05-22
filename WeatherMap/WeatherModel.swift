@@ -46,7 +46,6 @@ struct WeatherModel {
         }
         
        
-        
         self.longitude = data.longitude
         self.latitude = data.latitude
         self.elevation = data.elevation

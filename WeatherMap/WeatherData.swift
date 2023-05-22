@@ -16,6 +16,7 @@ struct WeatherData: Codable {
     let timezone_abbreviation: String
     let elevation: Double
     let current_weather: CurrentWeather
+   
     struct CurrentWeather: Codable {
         let temperature: Double
         let windspeed: Double
@@ -25,8 +26,8 @@ struct WeatherData: Codable {
         let time: String
     }
     
-    let hourly_units: HourlyUunits
-    struct HourlyUunits: Codable {
+    let hourly_units: HourlyUnits
+    struct HourlyUnits: Codable {
         let time: String
         let temperature_2m: String
         let rain: String

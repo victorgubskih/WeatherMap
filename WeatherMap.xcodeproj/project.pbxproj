@@ -20,6 +20,8 @@
 		7751493F2A097E2500AB5AB7 /* DayHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */; };
 		775149462A0C0FDC00AB5AB7 /* HourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */; };
 		775149472A0C0FDC00AB5AB7 /* HourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */; };
+		775149492A13EAB300AB5AB7 /* BackgroundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */; };
+		7751496B2A1684A300AB5AB7 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayHeaderView.xib; sourceTree = "<group>"; };
 		775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourTableViewCell.swift; sourceTree = "<group>"; };
 		775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourTableViewCell.xib; sourceTree = "<group>"; };
+		775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProvider.swift; sourceTree = "<group>"; };
+		7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */,
 				775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */,
 				775149342A02C84E00AB5AB7 /* WeatherModel.swift */,
+				775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */,
+				7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */,
 			);
 			path = WeatherMap;
 			sourceTree = "<group>";
@@ -161,12 +167,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775149492A13EAB300AB5AB7 /* BackgroundProvider.swift in Sources */,
 				7751492F2A004BC200AB5AB7 /* NetworkManager.swift in Sources */,
 				7751493B2A0695E300AB5AB7 /* DayHeaderView.swift in Sources */,
 				775149332A012E7900AB5AB7 /* WeatherData.swift in Sources */,
 				775149462A0C0FDC00AB5AB7 /* HourTableViewCell.swift in Sources */,
 				7751491F2A0045D500AB5AB7 /* ViewController.swift in Sources */,
 				7751491B2A0045D500AB5AB7 /* AppDelegate.swift in Sources */,
+				7751496B2A1684A300AB5AB7 /* UIColor+Gradient.swift in Sources */,
 				775149352A02C84F00AB5AB7 /* WeatherModel.swift in Sources */,
 				7751491D2A0045D500AB5AB7 /* SceneDelegate.swift in Sources */,
 			);

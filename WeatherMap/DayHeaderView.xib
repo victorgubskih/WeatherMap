@@ -14,8 +14,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day_background" translatesAutoresizingMaskIntoConstraints="NO" id="Mi9-J8-plw">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rvb-Ot-iT1">
-                    <rect key="frame" x="20" y="0.0" width="374" height="160"/>
+                    <rect key="frame" x="20" y="10" width="374" height="92"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="T0q-so-GwH">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
@@ -29,9 +32,11 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lea-4p-fe1">
                                     <rect key="frame" x="33" y="0.0" width="341" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                    <size key="shadowOffset" width="2" height="2"/>
                                 </label>
                             </subviews>
                         </stackView>
@@ -46,33 +51,35 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunrise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqX-QD-wA5">
-                                    <rect key="frame" x="33" y="0.0" width="341" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="33" y="0.0" width="149.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                    <size key="shadowOffset" width="2" height="2"/>
                                 </label>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="RuE-Qi-2lF">
-                            <rect key="frame" x="0.0" y="68" width="374" height="24"/>
-                            <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="MJu-V4-RF6">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <rect key="frame" x="191.5" y="0.0" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="24" id="0iw-zB-MZn"/>
                                         <constraint firstAttribute="height" constant="24" id="WET-6g-1aD"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sunset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-6b-UlM">
-                                    <rect key="frame" x="33" y="0.0" width="341" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <rect key="frame" x="224.5" y="0.0" width="149.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                    <size key="shadowOffset" width="2" height="2"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="dxk-6b-UlM" firstAttribute="width" secondItem="BqX-QD-wA5" secondAttribute="width" id="ahD-1C-g5F"/>
+                            </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-o9-l2n">
-                            <rect key="frame" x="0.0" y="102" width="374" height="24"/>
+                            <rect key="frame" x="0.0" y="68" width="374" height="24"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperature" translatesAutoresizingMaskIntoConstraints="NO" id="Xes-EI-Oya">
                                     <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
@@ -82,30 +89,31 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperatureMax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSr-tz-6YU">
-                                    <rect key="frame" x="33" y="0.0" width="341" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="33" y="0.0" width="149.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                    <size key="shadowOffset" width="2" height="2"/>
                                 </label>
-                            </subviews>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="zgl-NI-9Cf">
-                            <rect key="frame" x="0.0" y="136" width="374" height="24"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperature" translatesAutoresizingMaskIntoConstraints="NO" id="NW7-TN-lKE">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="temperature" translatesAutoresizingMaskIntoConstraints="NO" id="xqL-AO-opt">
+                                    <rect key="frame" x="191.5" y="0.0" width="24" height="24"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="24" id="GWb-2m-9kz"/>
-                                        <constraint firstAttribute="width" constant="24" id="ues-rF-hXZ"/>
+                                        <constraint firstAttribute="width" constant="24" id="5AT-r0-Cef"/>
+                                        <constraint firstAttribute="height" constant="24" id="E3K-gc-x2b"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperatureMin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gM2-Si-w1b">
-                                    <rect key="frame" x="33" y="0.0" width="341" height="24"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperatureMin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZw-mo-KaE">
+                                    <rect key="frame" x="224.5" y="0.0" width="149.5" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <color key="shadowColor" systemColor="opaqueSeparatorColor"/>
+                                    <size key="shadowOffset" width="2" height="2"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="wSr-tz-6YU" firstAttribute="width" secondItem="BZw-mo-KaE" secondAttribute="width" id="6YX-Fu-AfB"/>
+                            </constraints>
                         </stackView>
                     </subviews>
                 </stackView>
@@ -113,10 +121,14 @@
             <viewLayoutGuide key="safeArea" id="HAJ-vj-I38"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="HAJ-vj-I38" firstAttribute="trailing" secondItem="Mi9-J8-plw" secondAttribute="trailing" id="BLZ-fW-aNw"/>
                 <constraint firstAttribute="trailing" secondItem="rvb-Ot-iT1" secondAttribute="trailing" constant="20" id="Ef6-wL-TLu"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rvb-Ot-iT1" secondAttribute="bottom" id="G3i-08-ZEj"/>
-                <constraint firstItem="rvb-Ot-iT1" firstAttribute="top" secondItem="30g-CK-54B" secondAttribute="top" id="Vvi-uY-vA1"/>
+                <constraint firstAttribute="top" secondItem="Mi9-J8-plw" secondAttribute="top" id="GcE-Ds-feB"/>
+                <constraint firstItem="Mi9-J8-plw" firstAttribute="bottom" secondItem="rvb-Ot-iT1" secondAttribute="bottom" constant="10" id="NKD-Qj-eBn"/>
+                <constraint firstItem="rvb-Ot-iT1" firstAttribute="top" secondItem="30g-CK-54B" secondAttribute="top" constant="10" id="Vvi-uY-vA1"/>
                 <constraint firstItem="rvb-Ot-iT1" firstAttribute="leading" secondItem="30g-CK-54B" secondAttribute="leading" constant="20" id="XOo-cS-lOP"/>
+                <constraint firstItem="Mi9-J8-plw" firstAttribute="leading" secondItem="HAJ-vj-I38" secondAttribute="leading" id="vEJ-RZ-Efy"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="reuseIndetifier" value="header"/>
@@ -129,18 +141,22 @@
                 <outlet property="sunsetImageView" destination="MJu-V4-RF6" id="iZa-Pe-pOO"/>
                 <outlet property="sunsetLabel" destination="dxk-6b-UlM" id="46Y-tL-Y5u"/>
                 <outlet property="temperatureImageViewMax" destination="Xes-EI-Oya" id="A7b-MT-SNX"/>
-                <outlet property="temperatureImageViewMin" destination="NW7-TN-lKE" id="MCO-Nt-Xx1"/>
+                <outlet property="temperatureImageViewMin" destination="xqL-AO-opt" id="Amb-gd-4iS"/>
                 <outlet property="temperaturelabelMax" destination="wSr-tz-6YU" id="kxH-0i-Obl"/>
-                <outlet property="temperaturelabelMin" destination="gM2-Si-w1b" id="dH9-J1-OZq"/>
+                <outlet property="temperaturelabelMin" destination="BZw-mo-KaE" id="FFx-w6-AQc"/>
             </connections>
             <point key="canvasLocation" x="42" y="31"/>
         </view>
     </objects>
     <resources>
         <image name="calendar" width="48" height="48"/>
+        <image name="day_background" width="320" height="213"/>
         <image name="sunrise" width="80" height="80"/>
         <image name="sunset" width="80" height="80"/>
         <image name="temperature" width="80" height="80"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
