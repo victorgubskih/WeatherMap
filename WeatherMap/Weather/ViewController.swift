@@ -53,7 +53,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let surfacePressure = hourModel.surfacePressure
             hourCell.surfacePressureLabel.text = surfacePressure
             
-            hourCell.backgroundColor = backgroundProvider.background(for: hourModel, at: dayModel)
+        //  hourCell.backgroundColor = backgroundProvider.naturalBackground(for: hourModel, at: dayModel)
+            hourCell.gradientLayer.colors = backgroundProvider.gradientColors(for: hourModel, at: dayModel)
         }
        
         return cell

@@ -20,17 +20,19 @@ class HourTableViewCell: UITableViewCell {
     
     @IBOutlet weak var surfacePressureLabel: UILabel!
     
-    
+    var gradientLayer = CAGradientLayer()
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        gradientLayer.frame = contentView.bounds
+        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
+        contentView.layer.insertSublayer(gradientLayer, at: 0)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = contentView.bounds
     }
+   
     
  
     

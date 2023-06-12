@@ -22,6 +22,12 @@
 		775149472A0C0FDC00AB5AB7 /* HourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */; };
 		775149492A13EAB300AB5AB7 /* BackgroundProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */; };
 		7751496B2A1684A300AB5AB7 /* UIColor+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */; };
+		77B342BD2A1D260200FA2C38 /* BezierCurveCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B342BC2A1D260200FA2C38 /* BezierCurveCalculator.swift */; };
+		77B342BF2A2513C700FA2C38 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B342BE2A2513C700FA2C38 /* MapViewController.swift */; };
+		77B342C12A25141600FA2C38 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77B342C02A25141600FA2C38 /* Map.storyboard */; };
+		77BADC242A37764C00836130 /* WeatherAnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BADC232A37764C00836130 /* WeatherAnotationView.swift */; };
+		77EFD1752A2E44B400136344 /* AnnotationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EFD1742A2E44B400136344 /* AnnotationRepository.swift */; };
+		77EFD1772A2F943500136344 /* WeatherAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EFD1762A2F943400136344 /* WeatherAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +48,12 @@
 		775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourTableViewCell.xib; sourceTree = "<group>"; };
 		775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundProvider.swift; sourceTree = "<group>"; };
 		7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Gradient.swift"; sourceTree = "<group>"; };
+		77B342BC2A1D260200FA2C38 /* BezierCurveCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierCurveCalculator.swift; sourceTree = "<group>"; };
+		77B342BE2A2513C700FA2C38 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		77B342C02A25141600FA2C38 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		77BADC232A37764C00836130 /* WeatherAnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAnotationView.swift; sourceTree = "<group>"; };
+		77EFD1742A2E44B400136344 /* AnnotationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationRepository.swift; sourceTree = "<group>"; };
+		77EFD1762A2F943400136344 /* WeatherAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,22 +88,52 @@
 			children = (
 				7751491A2A0045D500AB5AB7 /* AppDelegate.swift */,
 				7751491C2A0045D500AB5AB7 /* SceneDelegate.swift */,
-				7751491E2A0045D500AB5AB7 /* ViewController.swift */,
-				775149202A0045D500AB5AB7 /* Main.storyboard */,
 				775149232A0045D900AB5AB7 /* Assets.xcassets */,
 				775149252A0045D900AB5AB7 /* LaunchScreen.storyboard */,
 				775149282A0045D900AB5AB7 /* Info.plist */,
-				7751493A2A0695E300AB5AB7 /* DayHeaderView.swift */,
-				7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */,
-				7751492E2A004BC200AB5AB7 /* NetworkManager.swift */,
-				775149322A012E7900AB5AB7 /* WeatherData.swift */,
-				775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */,
-				775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */,
-				775149342A02C84E00AB5AB7 /* WeatherModel.swift */,
-				775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */,
-				7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */,
+				77BADC212A37749F00836130 /* Weather */,
+				77BADC222A37752700836130 /* Utilyty */,
+				77BADC202A3773D500836130 /* Map */,
 			);
 			path = WeatherMap;
+			sourceTree = "<group>";
+		};
+		77BADC202A3773D500836130 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				77EFD1762A2F943400136344 /* WeatherAnnotation.swift */,
+				77B342C02A25141600FA2C38 /* Map.storyboard */,
+				77B342BE2A2513C700FA2C38 /* MapViewController.swift */,
+				77EFD1742A2E44B400136344 /* AnnotationRepository.swift */,
+				77BADC232A37764C00836130 /* WeatherAnotationView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		77BADC212A37749F00836130 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				7751491E2A0045D500AB5AB7 /* ViewController.swift */,
+				775149202A0045D500AB5AB7 /* Main.storyboard */,
+				775149442A0C0FDC00AB5AB7 /* HourTableViewCell.swift */,
+				775149452A0C0FDC00AB5AB7 /* HourTableViewCell.xib */,
+				7751493A2A0695E300AB5AB7 /* DayHeaderView.swift */,
+				7751493E2A097E2500AB5AB7 /* DayHeaderView.xib */,
+				775149342A02C84E00AB5AB7 /* WeatherModel.swift */,
+				775149322A012E7900AB5AB7 /* WeatherData.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		77BADC222A37752700836130 /* Utilyty */ = {
+			isa = PBXGroup;
+			children = (
+				77B342BC2A1D260200FA2C38 /* BezierCurveCalculator.swift */,
+				7751496A2A1684A300AB5AB7 /* UIColor+Gradient.swift */,
+				7751492E2A004BC200AB5AB7 /* NetworkManager.swift */,
+				775149482A13EAB100AB5AB7 /* BackgroundProvider.swift */,
+			);
+			path = Utilyty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +199,7 @@
 				775149272A0045D900AB5AB7 /* LaunchScreen.storyboard in Resources */,
 				775149242A0045D900AB5AB7 /* Assets.xcassets in Resources */,
 				775149222A0045D500AB5AB7 /* Main.storyboard in Resources */,
+				77B342C12A25141600FA2C38 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,11 +211,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				775149492A13EAB300AB5AB7 /* BackgroundProvider.swift in Sources */,
+				77BADC242A37764C00836130 /* WeatherAnotationView.swift in Sources */,
+				77EFD1772A2F943500136344 /* WeatherAnnotation.swift in Sources */,
 				7751492F2A004BC200AB5AB7 /* NetworkManager.swift in Sources */,
 				7751493B2A0695E300AB5AB7 /* DayHeaderView.swift in Sources */,
 				775149332A012E7900AB5AB7 /* WeatherData.swift in Sources */,
 				775149462A0C0FDC00AB5AB7 /* HourTableViewCell.swift in Sources */,
+				77B342BD2A1D260200FA2C38 /* BezierCurveCalculator.swift in Sources */,
 				7751491F2A0045D500AB5AB7 /* ViewController.swift in Sources */,
+				77EFD1752A2E44B400136344 /* AnnotationRepository.swift in Sources */,
+				77B342BF2A2513C700FA2C38 /* MapViewController.swift in Sources */,
 				7751491B2A0045D500AB5AB7 /* AppDelegate.swift in Sources */,
 				7751496B2A1684A300AB5AB7 /* UIColor+Gradient.swift in Sources */,
 				775149352A02C84F00AB5AB7 /* WeatherModel.swift in Sources */,
@@ -327,9 +375,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherMap/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Victor;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Map;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,9 +403,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherMap/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = Victor;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Map;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
